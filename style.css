@@ -7,26 +7,16 @@
 
 body {
     background: #000;
-    color: white;
+    color: #fff;
 }
 
 .hero {
-    position: relative;
-    height: 80vh;
-    background: linear-gradient(180deg, #000, #111);
+    height: 60vh;
+    background: linear-gradient(180deg,#000,#111);
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-align: center;
-}
-
-.logo {
-    width: 120px;
-    margin-bottom: 20px;
-}
-
-h1 {
-    font-size: 2.5rem;
 }
 
 section {
@@ -34,9 +24,9 @@ section {
     text-align: center;
 }
 
-.grid-eventos {
+.grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
     gap: 30px;
     margin-top: 40px;
 }
@@ -45,17 +35,18 @@ section {
     background: #111;
     padding: 30px;
     border-radius: 15px;
+    cursor: pointer;
     transition: 0.3s;
-    border: 1px solid #222;
 }
 
 .card:hover {
     transform: translateY(-5px);
-    border-color: #00ff88;
+    border: 1px solid #00ff88;
 }
 
 .status {
-    margin: 15px 0;
+    display: block;
+    margin-top: 10px;
     font-weight: bold;
 }
 
@@ -67,41 +58,43 @@ section {
     color: #00ff88;
 }
 
-.esgotado-texto {
-    color: gray;
+/* MODAL */
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.8);
+    justify-content: center;
+    align-items: center;
 }
 
-.esgotado {
-    opacity: 0.6;
+.modal-content {
+    background: #111;
+    padding: 40px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.fechar {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    cursor: pointer;
+    font-size: 25px;
 }
 
 .btn {
     display: inline-block;
+    margin-top: 20px;
     padding: 12px 25px;
     background: #00ff88;
-    color: black;
+    color: #000;
     text-decoration: none;
     font-weight: bold;
     border-radius: 30px;
-    transition: 0.3s;
-}
-
-.btn:hover {
-    background: #00cc66;
-}
-
-.disabled {
-    background: gray;
-    pointer-events: none;
-}
-
-.cta {
-    background: #111;
-}
-
-footer {
-    padding: 20px;
-    background: #000;
 }
 
 .whatsapp-float {
@@ -111,6 +104,6 @@ footer {
     background: #25D366;
     padding: 15px 18px;
     border-radius: 50%;
-    text-decoration: none;
     font-size: 24px;
+    text-decoration: none;
 }
