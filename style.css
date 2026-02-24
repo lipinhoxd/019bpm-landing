@@ -1,38 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'Orbitron', sans-serif;
 }
 
 body {
-    background: #000;
+    background: radial-gradient(circle at center, #0a0a0a, #000);
     color: #fff;
+    overflow-x: hidden;
 }
+
+/* HERO */
 
 .hero {
     height: 60vh;
-    background: linear-gradient(180deg,#000,#111);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
+.neon-title {
+    font-size: 4rem;
+    color: #00ff88;
+    text-shadow:
+        0 0 5px #00ff88,
+        0 0 10px #00ff88,
+        0 0 20px #00ff88;
+    animation: pulse 2s infinite alternate;
+}
+
+.subtitle {
+    margin-top: 15px;
+    opacity: 0.8;
+}
+
+@keyframes pulse {
+    from { text-shadow: 0 0 10px #00ff88; }
+    to { text-shadow: 0 0 25px #00ff88; }
+}
+
+/* SECTIONS */
+
 section {
     padding: 60px 20px;
     text-align: center;
 }
 
+.section-title {
+    margin-bottom: 40px;
+    color: #00ff88;
+}
+
+/* GRID */
+
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
     gap: 30px;
-    margin-top: 40px;
 }
 
+/* CARDS */
+
 .card {
-    background: #111;
+    background: rgba(0,255,136,0.05);
+    border: 1px solid rgba(0,255,136,0.3);
     padding: 30px;
     border-radius: 15px;
     cursor: pointer;
@@ -41,22 +76,17 @@ section {
 
 .card:hover {
     transform: translateY(-5px);
-    border: 1px solid #00ff88;
+    box-shadow: 0 0 20px #00ff88;
 }
 
 .status {
     display: block;
-    margin-top: 10px;
+    margin-top: 15px;
     font-weight: bold;
 }
 
-.ultimas {
-    color: #ff4444;
-}
-
-.abertas {
-    color: #00ff88;
-}
+.ultimas { color: #ff4444; }
+.abertas { color: #00ff88; }
 
 /* MODAL */
 
@@ -64,46 +94,60 @@ section {
     display: none;
     position: fixed;
     inset: 0;
-    background: rgba(0,0,0,0.8);
+    background: rgba(0,0,0,0.9);
     justify-content: center;
     align-items: center;
 }
 
 .modal-content {
-    background: #111;
+    background: #0a0a0a;
+    border: 1px solid #00ff88;
     padding: 40px;
     border-radius: 15px;
     width: 90%;
     max-width: 400px;
     text-align: center;
+    box-shadow: 0 0 20px #00ff88;
 }
 
 .fechar {
     position: absolute;
     right: 20px;
-    top: 10px;
+    top: 15px;
     cursor: pointer;
     font-size: 25px;
 }
 
+/* BUTTON */
+
 .btn {
     display: inline-block;
-    margin-top: 20px;
-    padding: 12px 25px;
+    margin-top: 25px;
+    padding: 12px 30px;
     background: #00ff88;
     color: #000;
     text-decoration: none;
     font-weight: bold;
     border-radius: 30px;
+    transition: 0.3s;
 }
+
+.btn:hover {
+    box-shadow: 0 0 15px #00ff88;
+}
+
+/* WHATSAPP FLOAT */
 
 .whatsapp-float {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background: #25D366;
+    background: #00ff88;
+    color: #000;
     padding: 15px 18px;
     border-radius: 50%;
     font-size: 24px;
     text-decoration: none;
+    box-shadow: 0 0 15px #00ff88;
+    animation: pulse 2s infinite alternate;
 }
