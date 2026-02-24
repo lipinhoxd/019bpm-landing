@@ -12,24 +12,12 @@ body {
 
 .hero {
     position: relative;
-    height: 100vh;
-    background: url('https://images.unsplash.com/photo-1518972559570-0a555aa79c6c') center/cover no-repeat;
+    height: 80vh;
+    background: linear-gradient(180deg, #000, #111);
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-}
-
-.overlay {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.7);
-}
-
-.hero-content {
-    position: relative;
-    z-index: 2;
 }
 
 .logo {
@@ -41,10 +29,55 @@ h1 {
     font-size: 2.5rem;
 }
 
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.grid-eventos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.card {
+    background: #111;
+    padding: 30px;
+    border-radius: 15px;
+    transition: 0.3s;
+    border: 1px solid #222;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: #00ff88;
+}
+
+.status {
+    margin: 15px 0;
+    font-weight: bold;
+}
+
+.ultimas {
+    color: #ff4444;
+}
+
+.abertas {
+    color: #00ff88;
+}
+
+.esgotado-texto {
+    color: gray;
+}
+
+.esgotado {
+    opacity: 0.6;
+}
+
 .btn {
     display: inline-block;
-    margin-top: 20px;
-    padding: 15px 30px;
+    padding: 12px 25px;
     background: #00ff88;
     color: black;
     text-decoration: none;
@@ -57,26 +90,18 @@ h1 {
     background: #00cc66;
 }
 
-section {
-    padding: 60px 20px;
-    text-align: center;
+.disabled {
+    background: gray;
+    pointer-events: none;
 }
 
-.vagas {
-    color: #00ff88;
-    font-weight: bold;
-    font-size: 1.2rem;
-}
-
-.cta-final {
+.cta {
     background: #111;
 }
 
 footer {
     padding: 20px;
-    text-align: center;
     background: #000;
-    font-size: 0.9rem;
 }
 
 .whatsapp-float {
@@ -84,10 +109,8 @@ footer {
     bottom: 20px;
     right: 20px;
     background: #25D366;
-    color: white;
-    font-size: 24px;
     padding: 15px 18px;
     border-radius: 50%;
     text-decoration: none;
-    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    font-size: 24px;
 }
