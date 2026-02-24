@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
-
-* { margin:0; padding:0; box-sizing:border-box; font-family:'Orbitron',sans-serif; }
+:root {
+    --neon: #00ff88;
+}
 
 body {
     background:#000;
@@ -8,58 +8,22 @@ body {
     overflow-x:hidden;
 }
 
-canvas {
-    position:fixed;
-    top:0;
-    left:0;
-    z-index:-1;
-}
-
-/* HERO */
-
-.hero {
-    height:60vh;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
-}
-
+/* TÍTULO GLITCH */
 .glitch {
     font-size:4rem;
-    color:#00ff88;
+    color:var(--neon);
     position:relative;
     animation:glitch 1s infinite;
 }
 
-@keyframes glitch {
-    0% { text-shadow:2px 2px #ff00ff; }
-    50% { text-shadow:-2px -2px #00ffff; }
-    100% { text-shadow:2px -2px #ff00ff; }
-}
-
-.subtitle { margin-top:15px; opacity:0.8; }
-
-/* SECTION */
-
-section { padding:60px 20px; text-align:center; }
-
 .section-title {
     margin-bottom:40px;
-    color:#00ff88;
-}
-
-/* GRID */
-
-.grid {
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:30px;
+    color:var(--neon);
 }
 
 .card {
-    background:rgba(0,255,136,0.05);
-    border:1px solid rgba(0,255,136,0.3);
+    background:rgba(0,0,0,0.4);
+    border:1px solid var(--neon);
     padding:30px;
     border-radius:15px;
     cursor:pointer;
@@ -68,68 +32,21 @@ section { padding:60px 20px; text-align:center; }
 
 .card:hover {
     transform:translateY(-5px);
-    box-shadow:0 0 20px #00ff88;
-}
-
-.status { display:block; margin-top:15px; font-weight:bold; }
-.ultimas { color:#ff4444; }
-.abertas { color:#00ff88; }
-
-.countdown {
-    margin-top:10px;
-    color:#00ffff;
-    font-size:0.9rem;
-}
-
-/* MODAL */
-
-.modal {
-    display:none;
-    position:fixed;
-    inset:0;
-    background:rgba(0,0,0,0.9);
-    justify-content:center;
-    align-items:center;
+    box-shadow:0 0 20px var(--neon);
 }
 
 .modal-content {
     background:#0a0a0a;
-    border:1px solid #00ff88;
-    padding:40px;
-    border-radius:15px;
-    width:90%;
-    max-width:400px;
-    text-align:center;
-    box-shadow:0 0 20px #00ff88;
-}
-
-.fechar {
-    position:absolute;
-    right:20px;
-    top:15px;
-    cursor:pointer;
-    font-size:25px;
+    border:1px solid var(--neon);
+    box-shadow:0 0 20px var(--neon);
 }
 
 .btn {
-    display:inline-block;
-    margin-top:20px;
-    padding:12px 30px;
-    background:#00ff88;
+    background:var(--neon);
     color:#000;
-    text-decoration:none;
-    border-radius:30px;
-    font-weight:bold;
 }
 
 .whatsapp-float {
-    position:fixed;
-    bottom:20px;
-    right:20px;
-    background:#00ff88;
-    padding:15px 18px;
-    border-radius:50%;
-    font-size:24px;
-    text-decoration:none;
-    box-shadow:0 0 15px #00ff88;
+    background:var(--neon);
+    box-shadow:0 0 15px var(--neon);
 }
