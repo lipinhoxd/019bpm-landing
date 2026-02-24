@@ -44,7 +44,8 @@ for(let i=0;i<80;i++){
 
 function draw(){
     ctx.clearRect(0,0,canvas.width,canvas.height);
-    ctx.fillStyle="#00ff88";
+    ctx.fillStyle = getComputedStyle(document.documentElement)
+    .getPropertyValue('--neon');
     particles.forEach(p=>{
         ctx.beginPath();
         ctx.arc(p.x,p.y,p.r,0,Math.PI*2,true);
