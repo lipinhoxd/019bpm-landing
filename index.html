@@ -3,17 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>019BPM | Excursões Oficiais</title>
+<title>019BPM | Excursões</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<canvas id="particles"></canvas>
+
 <header class="hero">
-    <h1 class="neon-title">019BPM</h1>
-    <p class="subtitle">Excursões para Festas Eletrônicas</p>
+    <h1 class="glitch" data-text="019BPM">019BPM</h1>
+    <p class="subtitle">Excursões Oficiais para Festas Eletrônicas</p>
 </header>
 
-<section class="eventos">
+<section>
     <h2 class="section-title">PRÓXIMOS EVENTOS</h2>
 
     <div class="grid">
@@ -21,36 +23,43 @@
         <div class="card" onclick="abrirModal('modal1')">
             <h3>FLOR DA VIDA 2026</h3>
             <p>Janeiro 2026</p>
+            <div class="countdown" id="count1"></div>
             <span class="status ultimas">🔥 Últimas vagas</span>
         </div>
 
         <div class="card" onclick="abrirModal('modal2')">
             <h3>UNIVERSO PARALELLO</h3>
             <p>Dezembro 2026</p>
+            <div class="countdown" id="count2"></div>
             <span class="status abertas">🟢 Vagas abertas</span>
         </div>
 
     </div>
 </section>
 
-<!-- MODAL 1 -->
+<section>
+    <h2 class="section-title">SAÍDAS CONFIRMADAS</h2>
+    <p>📍 Itapira/SP</p>
+    <p>📍 Mogi Mirim/SP</p>
+    <p>📍 Campinas/SP</p>
+</section>
+
+<!-- MODAIS -->
+
 <div class="modal" id="modal1">
     <div class="modal-content">
-        <span class="fechar" onclick="fecharModal('modal1')">&times;</span>
+        <span onclick="fecharModal('modal1')" class="fechar">&times;</span>
         <h2>Flor da Vida 2026</h2>
-        <p>Saída: Itapira/SP</p>
-        <p>Transporte executivo + organização 019BPM</p>
+        <p>Transporte executivo + Experiência 019BPM</p>
         <a href="https://wa.me/55SEUNUMERO?text=Tenho%20interesse%20na%20Flor%20da%20Vida" class="btn">Reservar</a>
     </div>
 </div>
 
-<!-- MODAL 2 -->
 <div class="modal" id="modal2">
     <div class="modal-content">
-        <span class="fechar" onclick="fecharModal('modal2')">&times;</span>
+        <span onclick="fecharModal('modal2')" class="fechar">&times;</span>
         <h2>Universo Paralello</h2>
-        <p>Saída: Itapira/SP</p>
-        <p>Experiência completa com a 019BPM</p>
+        <p>Excursão completa com organização premium</p>
         <a href="https://wa.me/55SEUNUMERO?text=Tenho%20interesse%20no%20Universo%20Paralello" class="btn">Reservar</a>
     </div>
 </div>
