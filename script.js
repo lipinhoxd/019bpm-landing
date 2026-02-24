@@ -56,6 +56,28 @@ function draw(){
 function update(){
     particles.forEach(p=>{
         p.y+=p.d;
+
+// TROCA AUTOMÁTICA DE NEON
+
+const coresNeon = [
+    "#00ff88",  // verde
+    "#00ffff",  // ciano
+    "#ff00ff",  // magenta
+    "#8a2be2",  // roxo
+    "#00bfff"   // azul elétrico
+];
+
+let indexCor = 0;
+
+function trocarCor(){
+    indexCor++;
+    if(indexCor >= coresNeon.length){
+        indexCor = 0;
+    }
+    document.documentElement.style.setProperty('--neon', coresNeon[indexCor]);
+}
+
+setInterval(trocarCor, 4000); // troca a cada 4 segundos
         if(p.y>canvas.height){ p.y=0; }
     });
 }
